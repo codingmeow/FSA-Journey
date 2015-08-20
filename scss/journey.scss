@@ -1,0 +1,31 @@
+#home {
+  padding: 0;
+  .scene {
+    height: 100vh;
+    background: #a8c5d5;
+    // border: 1px solid black;
+    // background: -webkit-linear-gradient(white, #a8c5d5, white); /* For Safari 5.1 to 6.0 */
+    // background: -o-linear-gradient(white, #a8c5d5, white); /* For Opera 11.1 to 12.0 */
+    // background: -moz-linear-gradient(white, #a8c5d5, white); /* For Firefox 3.6 to 15 */
+    // background: linear-gradient(white, #a8c5d5, white); /* Standard syntax (must be last) */
+    .script {
+      text-align: center;
+      position: relative;
+      top: 45%;
+      &.top-left {
+        top: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// .active {
+//   transition: background 2s;
+//   background: pink;
+// }

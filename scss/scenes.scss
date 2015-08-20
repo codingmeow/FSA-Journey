@@ -1,0 +1,35 @@
+.img {
+  height: 70vh;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+
+#scene1 {
+  #text1 {
+    left: -100%;
+  }
+	#img1 {
+		opacity: 0;
+	}
+}
+
+#scene3 {
+	#text2 {
+		left: -100%;
+	}
+	#img2 {
+		// position: relative;
+		opacity: 0;
+	}
+}

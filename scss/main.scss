@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  // background: ;
+}
+
+h1, h2 {
+  font-family: 'Finger Paint', cursive;
+  margin: 0 !important;
+  text-align: center;
+}
+
+h3, h4, p {
+	font-family: 'quicksand', sans-serif;
+	font-weight: 100;
+	margin: 0 !important;
+}
+
+small {
+	font-family: 'quicksand', sans-serif;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Add your fractal Sass files below!
+@import 'scenes';
+@import 'journey';
