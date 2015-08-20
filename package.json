@@ -1,0 +1,29 @@
+{
+  "name": "fsa-journey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jennifer Cui",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "gsap": "^1.17.0",
+    "jquery": "^2.1.4",
+    "scrollmagic": "^2.0.5"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "run-sequence": "^1.1.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
