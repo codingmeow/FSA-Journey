@@ -1,13 +1,19 @@
+.banner {
+  z-index: 100;
+}
+
 #home {
   padding: 0;
   .scene {
-    height: 100vh;
+    height: 95vh;
     background: #a8c5d5;
+    overflow: hidden;
     // border: 1px solid black;
-    // background: -webkit-linear-gradient(white, #a8c5d5, white); /* For Safari 5.1 to 6.0 */
-    // background: -o-linear-gradient(white, #a8c5d5, white); /* For Opera 11.1 to 12.0 */
-    // background: -moz-linear-gradient(white, #a8c5d5, white); /* For Firefox 3.6 to 15 */
-    // background: linear-gradient(white, #a8c5d5, white); /* Standard syntax (must be last) */
+    .title {
+      h1 {
+        font-size: 70px;
+      }
+    }
     .script {
       text-align: center;
       position: relative;
@@ -20,12 +26,6 @@
   }
 }
 
-
-
-
-
-
-// .active {
-//   transition: background 2s;
-//   background: pink;
-// }
+#footer {
+  height: 5vh;
+}

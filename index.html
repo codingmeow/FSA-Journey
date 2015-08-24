@@ -3,12 +3,14 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<script async src="public/main.js"></script>
-		<link rel="icon" type="image/ico" href="/favicon.ico">
+		<link rel="icon" type="image/ico" href="/image/favicon.ico">
 		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="public/style.css" />
+		<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/node_modules/gsap/src/minified/TweenMax.min.js"></script>
 		<script src="/node_modules/scrollmagic/scrollmagic/minified/scrollmagic.min.js"></script>
 		<script src="/node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-		<link rel="stylesheet" href="public/style.css" />
+		<script src="public/main.js"></script>
 
 		<!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
@@ -20,7 +22,7 @@
 	<body>
 		<section id="home" class='container-fluid'>
 			<div class='scene'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Journey through Fullstack Academy</h1>
 				</div>
 			</div>
@@ -28,12 +30,12 @@
 				<div class='img' id='img1'>
 					<img src="./image/1.svg"/>
 				</div>
-				<div class='script col-md-4' id='text1'>
+				<div class='script col-md-offset-9 col-md-3' id='text1'>
 					<h3>"I want to be a developer. In fact, I want to be a fullstack JavaScript developer. Fullstack Academy is the best... I want to go there!"</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene2'>
-				<div class='script'>
+				<div class='script title'>
 					<h1 id='two'>Applying to Fullstack Academy</h1>
 				</div>
 			</div>
@@ -56,127 +58,184 @@
 				</div>
 			</div>
 			<div class='scene' id='scene6'>
-				<div class='script'>
+				<div class='script title'>
+					<h1>After all the hard work...</h1>
+				</div>
+			</div>
+			<div class='scene' id='scene6a'>
+				<div class='img' id='img3'>
+					<img src="./image/3.svg"/>
+				</div>
+				<div class='script col-md-offset-2 col-md-3' id='text2'>
 					<h3>"I got into Fullstack Academy!"</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene7'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Foundations</h1>
-					<h3>Foundations is a 4 week pre-work remote course to get students up to speed with javascript basics and ready before the first day of school.</h3>
+				</div>
+			</div>
+			<div class='scene' id='scene7a'>
+				<div class='img' id='img4'>
+					<img src="./image/4.svg"/>
+				</div>
+				<div class='script col-md-offset-9 col-md-3' id='text3'>
+					<h3>Foundations is a 4 week pre-work remote course to get students up to speed with JavaScript basics and ready before the first day of school.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene8'>
-				<div class='script'>
+				<div class='img' id='img5'>
+					<img src="./image/5.svg"/>
+				</div>
+				<div class='script col-md-3' id='text4'>
 					<h1>Ice Cream Social</h1>
 					<h3>The ice cream social, a Fullstack Academy tradition, is the first time students come visit the campus</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene9'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Junior Phase</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene10'>
-				<div class='script'>
+				<div class='img' id='img6'>
+					<img src="./image/6.svg"/>
+				</div>
+				<div class='script col-md-offset-9 col-md-3' id='text5'>
 					<h3>In the 6 week long junior phase, students learn concepts and technologies with the best instructors in the industry</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene11'>
-				<div class='script'>
+				<div class='img' id='img7'>
+					<img src="./image/7.svg"/>
+				</div>
+				<div class='script col-md-3' id='text6'>
 					<h3>During workshops in the junior phase, students pair-program to put the concepts they learned into practice</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene12'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Review Week</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene13'>
-				<div class='script'>
+				<div class='script col-md-3 col-md-offset-9' id='text7'>
 					<h3>During review week, the students take assessments to test their knowledge</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene14'>
-				<div class='script'>
+				<div class='img' id='img8'>
+					<img src="./image/8.svg">
+				</div>
+				<div class='script col-md-3' id='text8'>
 					<h3>"The review week assessments are not so hard, I am super prepared for this!!!</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene15'>
-				<div class='script'>
+				<div class='img' id='img9'>
+					<img src="./image/9-bikini.svg">
+				</div>
+				<div class='script col-md-3 col-md-offset-9' id='text9'>
 					<h3>Review week is also a time for the students to relax and recharge</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene16'>
-				<div class='script'>
-					<h3>Fullstack students also like to go to hackathons during review week. Students have won over 18 hackathons and have, at times, swept the prizes.</h3>
+				<div class='img' id='img10'>
+					<img src="./image/10.svg">
+				</div>
+				<div class='script col-md-3' id='text10'>
+					<h3>Fullstack students also like to go to hackathons during review week. Students have won over 18 hackathons.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene17'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Senior Phase</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene18'>
-				<div class='script'>
+				<div class='img' id='img11'>
+					<img src="./image/11.svg">
+				</div>
+				<div class='script col-md-3 col-md-offset-9' id='text11'>
 					<h3>In the senior phase, students will participate in several group and individual projects to solidify their learning and to showcase on their resumes.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene19'>
-				<div class='script'>
+				<div class='img' id='img12'>
+					<img src="./image/12.svg">
+				</div>
+				<div class='script col-md-3' id='text12'>
 					<h3>Every morning, the students will have a chance to practice whiteboarding code challenges in preparation for technical interviews.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene20'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Hiring Day</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene21'>
-				<div class='script'>
+				<div class='img' id='img13'>
+					<img src="./image/13.svg">
+				</div>
+				<div class='script col-md-3 col-md-offset-9' id='text13'>
 					<h3>On hiring day, students will have a chance to showcase their months of hard work and demo their capstone projects to potential employers.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene22'>
-				<div class='script'>
+				<div class='img' id='img14'>
+					<img src="./image/14.svg">
+				</div>
+				<div class='script col-md-3' id='text14'>
 					<h3>After the demos, the students will have a chance to interview with the employers in a round-robin style.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene23'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Graduation</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene24'>
-				<div class='script'>
+				<div class='img' id='img15'>
+					<img src="./image/15.svg">
+				</div>
+				<div class='script col-md-3 col-md-offset-9' id='text15'>
 					<h3>"I graduated!"</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene25'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Fullstack Flight</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene26'>
-				<div class='script'>
+				<div class='img' id='img16'>
+					<img src="./image/16.svg">
+				</div>
+				<div class='script col-md-3' id='text16'>
 					<h3>Post graduation, Fullstack provides students with job search assistance and salary negotiation mentoring.</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene27'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Landing a Job</h1>
 				</div>
 			</div>
 			<div class='scene' id='scene28'>
-				<div class='script'>
+				<div class='img' id='img17'>
+					<img src="./image/17.svg">
+				</div>
+				<div class='script col-md-3 col-md-offset-9' id='text17'>
 					<h3>"I now have my dream job! Coming to FSA was the best decision I have ever made. I would not trade it for the world!"</h3>
 				</div>
 			</div>
 			<div class='scene' id='scene29'>
-				<div class='script'>
+				<div class='script title'>
 					<h1>Apply now!</h1>
 				</div>
 			</div>
+<!-- 			<div id='footer'>
+				<p>about</p>
+			</div> -->
 		</section>
 	</body>
 </html>
