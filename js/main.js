@@ -3,6 +3,7 @@ var utilities = require('./functions');
 $(document).ready(function() {
 
   var controller = new ScrollMagic.Controller();
+  var allScenes = [];
 
   // SCENE DECISION
 
@@ -15,10 +16,6 @@ $(document).ready(function() {
   var scene1 = utilities.newScene('#scene1').setTween(t1);
   tween1 = utilities.fade('#img1');
   var scene1a = utilities.newScene('#scene2').setTween(tween1);
-
-  // scene1.on('update', function(e) {
-  //   console.log(e.target.controller().info('scrollDirection'));
-  // })
 
   // SCENE PREP
 
@@ -180,7 +177,7 @@ $(document).ready(function() {
 
   // ADDING SCENES TO CONTROLLER
 
-  var allScenes = [scene1, scene1a, scene2, scene2a, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a]
+  allScenes = [scene1, scene1a, scene2, scene2a, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a]
   utilities.showProgress(allScenes);
   controller.addScene(allScenes);
 

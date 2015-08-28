@@ -35,7 +35,7 @@ function textRight(el) {
 
 function showProgress(scenes) {
   scenes.map(function(scene) {
-    scene.on('leave', function(el) {
+    scene.on('start', function(el) {
       var direction = el.target.controller().info('scrollDirection');
       if (direction === 'FORWARD') {
         $('.books').css('bottom', "+=22px");
@@ -45,6 +45,10 @@ function showProgress(scenes) {
     });
   })
 }
+
+// function showProgress() {
+
+// }
 
 module.exports = {
   newScene: newScene,
