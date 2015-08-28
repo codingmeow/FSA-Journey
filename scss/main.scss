@@ -4,7 +4,7 @@
 }
 
 h1, h2 {
-  font-family: 'Finger Paint', cursive;
+  font-family: 'Josefin Slab', serif;
   margin: 0 !important;
   text-align: center;
 }
@@ -30,3 +30,6 @@ small {
 // Add your fractal Sass files below!
 @import 'scenes';
 @import 'journey';
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
