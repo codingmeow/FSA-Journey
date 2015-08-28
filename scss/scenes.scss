@@ -7,6 +7,10 @@
   top: 0;
   bottom: 0;
   opacity: 0;
+  // &.prep {
+  // 	height: 50vh;
+		// width: auto;
+  // }
   img {
     display: block;
     height: 100%;
@@ -34,7 +38,7 @@
 
 #scene3 {
 	#img2 {
-		height: 70vh;
+		height: 50vh;
 		width: auto;
 	}
 }
@@ -77,6 +81,10 @@
 }
 
 #scene13 {
+	#img2d {
+		height: 50vh;
+		width: auto;
+	}
 	#text7 {
 		right: -100%;
 	}

@@ -46,10 +46,6 @@ function showProgress(scenes) {
   })
 }
 
-// function showProgress() {
-
-// }
-
 module.exports = {
   newScene: newScene,
   appear: appear,
