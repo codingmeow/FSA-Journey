@@ -12,31 +12,45 @@ function newScene(trigger) {
 function appear(el) {
   return TweenMax.to(el, 1, {
     opacity: 1
-  })
+  }, -1)
 };
 
 function fade(el) {
   return TweenMax.to(el, 1, {
     opacity: 0
-  })
+  }, -1)
 };
 
 function textLeft(el) {
   return TweenMax.to(el, 5, {
     left: 0
-  }, -1)
+  })
 };
 
 function textRight(el) {
   return TweenMax.to(el, 5, {
     right: 0
-  }, -1)
+  })
 };
+
+function showProgress(scenes) {
+  scenes.map(function(scene) {
+    scene.on('leave', function(el) {
+      var direction = el.target.controller().info('scrollDirection');
+      if (direction === 'FORWARD') {
+        $('.books').css('bottom', "+=22px");
+      } else {
+        $('.books').css('bottom', "-=22px");
+      }
+    });
+  })
+}
 
 module.exports = {
   newScene: newScene,
   appear: appear,
   fade: fade,
   textLeft: textLeft,
-  textRight: textRight
+  textRight: textRight,
+  showProgress: showProgress
 };
