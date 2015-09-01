@@ -1,34 +1,54 @@
 function newScene(trigger) {
 
   var duration = $(trigger)[0].scrollHeight;
-  var scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: trigger,
     duration: duration / 4,
     reverse: true
-  })
-  return scene;
+  });
 };
+
+function newTitle(trigger) {
+  var duration = $(trigger)[0].scrollHeight;
+  return new ScrollMagic.Scene({
+    triggerElement: trigger,
+    triggerHook: 'onEnter',
+    duration: duration,
+    reverse: true
+  });
+};
+
+function wipeScene(el) {
+  return new TimelineMax()
+    .fromTo(el, 1, {
+      x: "-100%"
+    }, {
+      x: "0%",
+      ease: Linear.easeNone
+    }); // in from left
+
+}
 
 function appear(el) {
   return TweenMax.to(el, 1, {
     opacity: 1
-  }, -1)
+  })
 };
 
 function fade(el) {
   return TweenMax.to(el, 1, {
     opacity: 0
-  }, -1)
+  })
 };
 
 function textLeft(el) {
-  return TweenMax.to(el, 5, {
+  return TweenMax.to(el, 1, {
     left: 0
   })
 };
 
 function textRight(el) {
-  return TweenMax.to(el, 5, {
+  return TweenMax.to(el, 1, {
     right: 0
   })
 };
@@ -48,6 +68,8 @@ function showProgress(scenes) {
 
 module.exports = {
   newScene: newScene,
+  newTitle: newTitle,
+  wipeScene: wipeScene,
   appear: appear,
   fade: fade,
   textLeft: textLeft,
