@@ -2,20 +2,22 @@
   z-index: 100;
 }
 
-#home {
+.home {
   padding: 0;
   .scene {
-    height: 95vh;
-    background: #a8c5d5;
+    height: 100vh;
     overflow: hidden;
-    // border: 1px solid black;
-    .title {
+    &.title {
+      // background: #74767a;
+      background: #9FA7D6;
+      z-index: 1000;
       h1 {
+        text-align: center;
         font-size: 70px;
       }
     }
     .script {
-      text-align: center;
+      text-align: left;
       position: relative;
       top: 45%;
       &.top-left {

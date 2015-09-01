@@ -1,18 +1,22 @@
 * {
   box-sizing: border-box;
-  // background: ;
+}
+
+#apply {
+  text-decoration: none;
+  color: white;
 }
 
 h1, h2 {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 !important;
-  text-align: center;
+  color: white;
 }
 
 h3, h4, p {
-	font-family: 'quicksand', sans-serif;
-	font-weight: 100;
-	margin: 0 !important;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 !important;
+  color: #58595b;
 }
 
 small {
@@ -30,6 +34,5 @@ small {
 // Add your fractal Sass files below!
 @import 'scenes';
 @import 'journey';
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
-@import url(https://fonts.googleapis.com/css?family=Arvo);
