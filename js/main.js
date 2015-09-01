@@ -19,10 +19,20 @@ $(document).ready(function() {
 
   // SCENE PREP
 
-  var tween2 = utilities.appear('#img2');
+  var tween2 = utilities.appear('#img2a');
   var scene2 = utilities.newScene('#scene3').setTween(tween2);
-  tween2 = utilities.fade('#img2');
-  var scene2a = utilities.newScene('#scene6').setTween(tween2);
+  var t2a = new TimelineMax();
+  var tween2a = utilities.appear('#img2b');
+  tween2 = utilities.fade('#img2a');
+  t2a.add(tween2a).add(tween2);
+  var scene2a = utilities.newScene('#scene4').setTween(t2a);
+  var t2b = new TimelineMax();
+  tween2a = utilities.fade('#img2b');
+  var tween2b = utilities.appear('#img2c');
+  t2b.add(tween2b).add(tween2a);
+  var scene2b = utilities.newScene('#scene5').setTween(t2b);
+  tween2b = utilities.fade('#img2c');
+  var scene2c = utilities.newScene('#scene6').setTween(tween2b);
 
   // SCENE ACCEPTANCE
 
@@ -77,13 +87,13 @@ $(document).ready(function() {
   // assessments
   var t7 = new TimelineMax();
   var tween7 = utilities.textRight('#text7');
-  var tween7a = utilities.appear('#img2');
+  var tween7a = utilities.appear('#img2d');
   t7.add(tween7).add(tween7a);
   var scene7 = utilities.newScene('#scene13').setTween(t7);
 
   // not so hard
   var t7a = new TimelineMax();
-  tween7 = utilities.fade('#img2');
+  tween7 = utilities.fade('#img2d');
   var tween7b = utilities.appear('#img8');
   var tween7c = utilities.textLeft('#text8');
   t7a.add(tween7).add(tween7b).add(tween7c);
@@ -177,7 +187,7 @@ $(document).ready(function() {
 
   // ADDING SCENES TO CONTROLLER
 
-  allScenes = [scene1, scene1a, scene2, scene2a, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a]
+  allScenes = [scene1, scene1a, scene2, scene2a, scene2b, scene2c, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a]
   utilities.showProgress(allScenes);
   controller.addScene(allScenes);
 
