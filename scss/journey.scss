@@ -7,10 +7,12 @@
   .scene {
     height: 100vh;
     overflow: hidden;
+    background: #a8c5d5;
+    text-align: left;
     &.title {
       // background: #74767a;
       background: #9FA7D6;
-      z-index: 1000;
+      // z-index: 1000;
       h1 {
         text-align: center;
         font-size: 70px;
