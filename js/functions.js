@@ -9,27 +9,6 @@ function newScene(trigger) {
   });
 };
 
-// function newTitle(trigger) {
-//   var duration = $(trigger)[0].scrollHeight;
-//   return new ScrollMagic.Scene({
-//     triggerElement: trigger,
-//     triggerHook: 'onEnter',
-//     duration: duration,
-//     reverse: true
-//   });
-// };
-
-// function wipeScene(el) {
-//   return new TimelineMax()
-//     .fromTo(el, 1, {
-//       x: "-100%"
-//     }, {
-//       x: "0%",
-//       ease: Linear.easeNone
-//     });
-
-// }
-
 function appear(el) {
   return TweenMax.to(el, 1, {
     opacity: 1
@@ -54,6 +33,27 @@ function textRight(el) {
   })
 };
 
+function pinTitles(el, sceneArray) {
+  for (var i = 0; i < el.length; i++) {
+    sceneArray.push(new ScrollMagic.Scene({
+        triggerElement: el[i],
+        triggerHook: 'onEnter'
+      })
+      .setPin(el[i]));
+  }
+};
+
+function removeTitlePin(el, sceneArray) {
+  for (var i = 0; i < el.length; i++) {
+    sceneArray.push(new ScrollMagic.Scene({
+        triggerElement: el[i],
+        triggerHook: 'onEnter'
+
+      })
+      .removePin(el[i]));
+  }
+};
+
 function showProgress(scenes) {
   scenes.map(function(scene) {
     scene.on('start', function(el) {
@@ -73,5 +73,7 @@ module.exports = {
   fade: fade,
   textLeft: textLeft,
   textRight: textRight,
+  pinTitles: pinTitles,
+  removeTitlePin: removeTitlePin,
   showProgress: showProgress
 };

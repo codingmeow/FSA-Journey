@@ -7,6 +7,11 @@ $(document).ready(function() {
   var allScenes = [];
   var progressScenes = [];
 
+  var titleScenes = $("div.title").get(); // title
+  var nonTitleScenes = $('.scene').not('.title').get(); //non-title
+
+  utilities.pinTitles(titleScenes, allScenes);
+  utilities.removeTitlePin(nonTitleScenes, allScenes);
 
   // SCENE DECISION
 
@@ -225,12 +230,6 @@ $(document).ready(function() {
   utilities.showProgress(progressScenes);
   controller.addScene(allScenes);
 
-  // grab all title slides
-  var titleSlides = $("div.title").get();
-
-  // grab all non-title slides
-  var nonTitleSlides = $('.scene').not('.title').get();
-
   // create scene for every slide
   function pinTitles() {
     for (var i = 0; i < titleSlides.length; i++) {
@@ -244,15 +243,13 @@ $(document).ready(function() {
 
   function removeTitlePin() {
     for (var i = 0; i < nonTitleSlides.length; i++) {
-      new ScrollMagic.Scene({
-        triggerElement: nonTitleSlides[i],
-        triggerHook: 'onEnter'
+      allScenes.push(new ScrollMagic.Scene({
+          triggerElement: nonTitleSlides[i],
+          triggerHook: 'onEnter'
 
-      })
-        .removePin(nonTitleSlides[i])
-        .addTo(controller);
+        })
+        .removePin(nonTitleSlides[i]));
     }
   };
-  removeTitlePin();
-  pinTitles();
+
 })
