@@ -7,17 +7,6 @@ $(document).ready(function() {
   var allScenes = [];
   var progressScenes = [];
 
-  // var titleSlides = document.querySelectorAll("section.panel");
-
-  // // create scene for every slide
-  // for (var i = 0; i < titleSlides.length; i++) {
-  //   new ScrollMagic.Scene({
-  //     triggerElement: titleSlides[i]
-  //   })
-  //     .setPin(titleSlides[i])
-  //     .addTo(controller);
-  // }
-
 
   // SCENE DECISION
 
@@ -34,6 +23,7 @@ $(document).ready(function() {
   tween1 = utilities.fade('#img1');
   t1a.add(tween1a).add(tween1);
   var scene1a = utilities.newScene('#scene2').setTween(t1a);
+  progressScenes.push(scene1a);
 
   // SCENE PREP
 
@@ -229,12 +219,39 @@ $(document).ready(function() {
   tween12a = utilities.fade('#img17');
   var scene12a = utilities.newScene('#scene29').setTween(tween12a);
 
-  var titleSlides = document.querySelectorAll("div.title");
-
   // ADDING SCENES TO CONTROLLER
 
   allScenes = [scene1, scene1a, scene2, scene2a, scene2b, scene2c, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a]
   utilities.showProgress(progressScenes);
   controller.addScene(allScenes);
 
+
+  var titleSlides = $("div.title").get();
+  console.log('titleSlides', titleSlides);
+  var nonTitleSlides = $('.scene').not('.title').get();
+  console.log('nonTitleSlides', nonTitleSlides);
+  // create scene for every slide
+  function pinTitles() {
+    for (var i = 0; i < titleSlides.length; i++) {
+      allScenes.push(new ScrollMagic.Scene({
+          triggerElement: titleSlides[i],
+          triggerHook: 'onLeave'
+        })
+        .setPin(titleSlides[i]));
+    }
+  };
+
+  function removeTitlePin() {
+    for (var i = 0; i < nonTitleSlides.length; i++) {
+      new ScrollMagic.Scene({
+        triggerElement: nonTitleSlides[i],
+        triggerHook: 'onEnter'
+
+      })
+        .removePin(nonTitleSlides[i])
+        .addTo(controller);
+    }
+  };
+  removeTitlePin();
+  pinTitles();
 })

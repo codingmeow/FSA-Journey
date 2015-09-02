@@ -3,7 +3,8 @@ function newScene(trigger) {
   var duration = $(trigger)[0].scrollHeight;
   return new ScrollMagic.Scene({
     triggerElement: trigger,
-    duration: duration / 4,
+    // triggerHook: 'onLeave',
+    duration: duration / 2,
     reverse: true
   });
 };
