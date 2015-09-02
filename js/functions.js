@@ -9,27 +9,6 @@ function newScene(trigger) {
   });
 };
 
-// function newTitle(trigger) {
-//   var duration = $(trigger)[0].scrollHeight;
-//   return new ScrollMagic.Scene({
-//     triggerElement: trigger,
-//     triggerHook: 'onEnter',
-//     duration: duration,
-//     reverse: true
-//   });
-// };
-
-// function wipeScene(el) {
-//   return new TimelineMax()
-//     .fromTo(el, 1, {
-//       x: "-100%"
-//     }, {
-//       x: "0%",
-//       ease: Linear.easeNone
-//     });
-
-// }
-
 function appear(el) {
   return TweenMax.to(el, 1, {
     opacity: 1
