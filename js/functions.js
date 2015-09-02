@@ -3,32 +3,32 @@ function newScene(trigger) {
   var duration = $(trigger)[0].scrollHeight;
   return new ScrollMagic.Scene({
     triggerElement: trigger,
-    triggerHook: 'onEnter',
-    duration: duration,
+    // triggerHook: 'onEnter',
+    duration: duration / 2,
     reverse: true
   });
 };
 
-function newTitle(trigger) {
-  var duration = $(trigger)[0].scrollHeight;
-  return new ScrollMagic.Scene({
-    triggerElement: trigger,
-    triggerHook: 'onEnter',
-    duration: duration,
-    reverse: true
-  });
-};
+// function newTitle(trigger) {
+//   var duration = $(trigger)[0].scrollHeight;
+//   return new ScrollMagic.Scene({
+//     triggerElement: trigger,
+//     triggerHook: 'onEnter',
+//     duration: duration,
+//     reverse: true
+//   });
+// };
 
-function wipeScene(el) {
-  return new TimelineMax()
-    .fromTo(el, 1, {
-      x: "-100%"
-    }, {
-      x: "0%",
-      ease: Linear.easeNone
-    }); // in from left
+// function wipeScene(el) {
+//   return new TimelineMax()
+//     .fromTo(el, 1, {
+//       x: "-100%"
+//     }, {
+//       x: "0%",
+//       ease: Linear.easeNone
+//     });
 
-}
+// }
 
 function appear(el) {
   return TweenMax.to(el, 1, {
@@ -69,8 +69,6 @@ function showProgress(scenes) {
 
 module.exports = {
   newScene: newScene,
-  newTitle: newTitle,
-  wipeScene: wipeScene,
   appear: appear,
   fade: fade,
   textLeft: textLeft,

@@ -123,7 +123,7 @@ $(document).ready(function() {
   // relax
   var t7b = new TimelineMax();
   tween7 = utilities.fade('#img8');
-  var tween7d = utilities.appear('#img9');
+  var tween7d = utilities.appear('#img9')
   var tween7e = utilities.textRight('#text9');
   t7b.add(tween7).add(tween7d).add(tween7e);
   var scene7b = utilities.newScene('#scene15').setTween(t7b);
