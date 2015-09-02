@@ -225,17 +225,18 @@ $(document).ready(function() {
   utilities.showProgress(progressScenes);
   controller.addScene(allScenes);
 
-
+  // grab all title slides
   var titleSlides = $("div.title").get();
-  console.log('titleSlides', titleSlides);
+
+  // grab all non-title slides
   var nonTitleSlides = $('.scene').not('.title').get();
-  console.log('nonTitleSlides', nonTitleSlides);
+
   // create scene for every slide
   function pinTitles() {
     for (var i = 0; i < titleSlides.length; i++) {
       allScenes.push(new ScrollMagic.Scene({
           triggerElement: titleSlides[i],
-          triggerHook: 'onLeave'
+          triggerHook: 'onEnter'
         })
         .setPin(titleSlides[i]));
     }
