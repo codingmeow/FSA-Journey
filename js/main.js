@@ -244,13 +244,12 @@ $(document).ready(function() {
 
   function removeTitlePin() {
     for (var i = 0; i < nonTitleSlides.length; i++) {
-      new ScrollMagic.Scene({
-        triggerElement: nonTitleSlides[i],
-        triggerHook: 'onEnter'
+      allScenes.push(new ScrollMagic.Scene({
+          triggerElement: nonTitleSlides[i],
+          triggerHook: 'onEnter'
 
-      })
-        .removePin(nonTitleSlides[i])
-        .addTo(controller);
+        })
+        .removePin(nonTitleSlides[i]));
     }
   };
   removeTitlePin();
