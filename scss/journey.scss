@@ -19,13 +19,19 @@
       }
     }
     .script {
-      text-align: left;
+      // left: 5%;
+      width: 35%;
+      text-align: right;
       position: relative;
       top: 45%;
       &.top-left {
         top: 0;
         text-align: left;
       }
+    }
+    .title-text {
+      position: relative;
+      top: 45%;
     }
   }
 }
