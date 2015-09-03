@@ -230,26 +230,4 @@ $(document).ready(function() {
   utilities.showProgress(progressScenes);
   controller.addScene(allScenes);
 
-  // create scene for every slide
-  function pinTitles() {
-    for (var i = 0; i < titleSlides.length; i++) {
-      allScenes.push(new ScrollMagic.Scene({
-          triggerElement: titleSlides[i],
-          triggerHook: 'onEnter'
-        })
-        .setPin(titleSlides[i]));
-    }
-  };
-
-  function removeTitlePin() {
-    for (var i = 0; i < nonTitleSlides.length; i++) {
-      allScenes.push(new ScrollMagic.Scene({
-          triggerElement: nonTitleSlides[i],
-          triggerHook: 'onEnter'
-
-        })
-        .removePin(nonTitleSlides[i]));
-    }
-  };
-
 })
