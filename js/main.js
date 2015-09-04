@@ -65,7 +65,7 @@ $(document).ready(function() {
   // SCENE FOUNDATIONS
 
   var t3 = new TimelineMax();
-  var tween4 = utilities.textRight('#text3');
+  var tween4 = utilities.textLeft('#text3');
   var tween4a = utilities.appear('#img4');
   t3.add(tween4).add(tween4a);
   var scene4 = utilities.newScene('#scene7a').setTween(t3);
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
   // lectures
   var t5 = new TimelineMax();
-  var tween6 = utilities.textRight('#text5');
+  var tween6 = utilities.textLeft('#text5');
   var tween6a = utilities.appear('#img6');
   t5.add(tween6).add(tween6a);
   var scene6 = utilities.newScene('#scene10').setTween(t5);
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
   // assessments
   var t7 = new TimelineMax();
-  var tween7 = utilities.textRight('#text7');
+  var tween7 = utilities.textLeft('#text7');
   var tween7a = utilities.appear('#img2d');
   t7.add(tween7).add(tween7a);
   var scene7 = utilities.newScene('#scene13').setTween(t7);
@@ -129,7 +129,7 @@ $(document).ready(function() {
   var t7b = new TimelineMax();
   tween7 = utilities.fade('#img8');
   var tween7d = utilities.appear('#img9')
-  var tween7e = utilities.textRight('#text9');
+  var tween7e = utilities.textLeft('#text9');
   t7b.add(tween7).add(tween7d).add(tween7e);
   var scene7b = utilities.newScene('#scene15').setTween(t7b);
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
 
   // projects
   var t8 = new TimelineMax();
-  var tween8 = utilities.textRight('#text11');
+  var tween8 = utilities.textLeft('#text11');
   var tween8a = utilities.appear('#img11');
   t8.add(tween8).add(tween8a);
   var scene8 = utilities.newScene('#scene18').setTween(t8);
@@ -172,7 +172,7 @@ $(document).ready(function() {
 
   // demos
   var t9 = new TimelineMax();
-  var tween9 = utilities.textRight('#text13');
+  var tween9 = utilities.textLeft('#text13');
   var tween9a = utilities.appear('#img13');
   t9.add(tween9).add(tween9a);
   var scene9 = utilities.newScene('#scene21').setTween(t9);
@@ -193,7 +193,7 @@ $(document).ready(function() {
   // SCENE GRADUATION
 
   var t10 = new TimelineMax();
-  var tween10 = utilities.textRight('#text15');
+  var tween10 = utilities.textLeft('#text15');
   var tween10a = utilities.appear('#img15');
   t10.add(tween10).add(tween10a);
   var scene10 = utilities.newScene('#scene24').setTween(t10);
@@ -215,7 +215,7 @@ $(document).ready(function() {
 
   // SCENE LANDING A JOB
   var t12 = new TimelineMax();
-  var tween12 = utilities.textRight('#text17');
+  var tween12 = utilities.textLeft('#text17');
   var tween12a = utilities.appear('#img17');
   t12.add(tween12).add(tween12a);
   var scene12 = utilities.newScene('#scene28').setTween(t12);

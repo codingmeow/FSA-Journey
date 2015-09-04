@@ -18,8 +18,13 @@
         font-size: 70px;
       }
     }
+    &.prep {
+      .script {
+        text-align: center;
+      }
+    }
     .script {
-      // left: 5%;
+      // left: -50%;
       width: 35%;
       text-align: right;
       position: relative;
