@@ -1,0 +1,4 @@
+npm install
+npm install -g http-server
+gulp build
+http-server ./
