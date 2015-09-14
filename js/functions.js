@@ -21,18 +21,6 @@ function fade(el) {
   })
 };
 
-function textLeft(el) {
-  return TweenMax.to(el, 1, {
-    left: 0
-  })
-};
-
-function textRight(el) {
-  return TweenMax.to(el, 1, {
-    right: 0
-  })
-};
-
 function pinTitles(el, sceneArray) {
   for (var i = 0; i < el.length; i++) {
     sceneArray.push(new ScrollMagic.Scene({
@@ -71,8 +59,6 @@ module.exports = {
   newScene: newScene,
   appear: appear,
   fade: fade,
-  textLeft: textLeft,
-  textRight: textRight,
   pinTitles: pinTitles,
   removeTitlePin: removeTitlePin,
   showProgress: showProgress
