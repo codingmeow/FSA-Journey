@@ -3,12 +3,6 @@
 * {
   box-sizing: border-box; }
 
-#apply {
-  text-decoration: none;
-  color: white; }
-  #apply:hover {
-    color: #a8c5d5; }
-
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
   margin: 0 !important;
@@ -45,6 +39,15 @@ small {
   .books img {
     width: 100%;
     display: block; }
+
+#apply {
+  text-decoration: none;
+  color: white; }
+  #apply:hover {
+    color: #a8c5d5; }
+
+#arrow {
+  padding-left: 10%; }
 
 #scene7a #img4 {
   height: 60vh;
@@ -92,6 +95,7 @@ small {
         top: 0;
         text-align: left; }
     .home .scene .title-text {
+      text-align: center;
       position: relative;
       top: 45%; }
 

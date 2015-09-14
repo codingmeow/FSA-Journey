@@ -26,6 +26,18 @@
 	z-index: 2000;
 }
 
+#apply {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: #a8c5d5;
+  }
+}
+
+#arrow {
+	padding-left: 10%;
+}
+
 #scene7a {
 	#img4 {
 		height: 60vh;
