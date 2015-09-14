@@ -103,6 +103,11 @@ small {
     border-bottom: 1px solid white; }
   .footer h4 {
     padding: 1%; }
+    .footer h4 .contributor {
+      color: white;
+      text-decoration: none; }
+      .footer h4 .contributor:hover {
+        color: #778cba; }
   .footer .credit {
     padding: 2%;
     text-align: left;
