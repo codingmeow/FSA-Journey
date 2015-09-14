@@ -10,9 +10,7 @@
     background: #a8c5d5;
     text-align: left;
     &.title {
-      // background: #74767a;
       background: #778cba;
-      // z-index: 1000;
       h1 {
         text-align: center;
         font-size: 70px;
@@ -24,7 +22,6 @@
       }
     }
     .script {
-      // left: -50%;
       width: 35%;
       text-align: right;
       position: relative;
@@ -35,12 +32,38 @@
       }
     }
     .title-text {
+      text-align: center;
       position: relative;
       top: 45%;
     }
   }
 }
 
-#footer {
-  height: 5vh;
+.footer {
+  background: #a8c5d5;
+  height: 35vh;
+  h3 {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  h4 {
+    padding: 1%;
+    .contributor {
+      color: white;
+      &:hover {
+        color: #778cba;
+      }
+      text-decoration: none;
+    }
+  }
+  .credit {
+    padding: 2%;
+    text-align: left;
+    // border: 1px solid black;
+    height: 100%;
+    img {
+      width: 20%;
+      height: auto;
+    }
+  }
 }

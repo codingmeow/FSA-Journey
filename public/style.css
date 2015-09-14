@@ -3,10 +3,6 @@
 * {
   box-sizing: border-box; }
 
-#apply {
-  text-decoration: none;
-  color: white; }
-
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
   margin: 0 !important;
@@ -43,6 +39,15 @@ small {
   .books img {
     width: 100%;
     display: block; }
+
+#apply {
+  text-decoration: none;
+  color: white; }
+  #apply:hover {
+    color: #a8c5d5; }
+
+#arrow {
+  padding-left: 10%; }
 
 #scene7a #img4 {
   height: 60vh;
@@ -90,8 +95,27 @@ small {
         top: 0;
         text-align: left; }
     .home .scene .title-text {
+      text-align: center;
       position: relative;
       top: 45%; }
 
-#footer {
-  height: 5vh; }
+.footer {
+  background: #a8c5d5;
+  height: 35vh; }
+  .footer h3 {
+    color: white;
+    border-bottom: 1px solid white; }
+  .footer h4 {
+    padding: 1%; }
+    .footer h4 .contributor {
+      color: white;
+      text-decoration: none; }
+      .footer h4 .contributor:hover {
+        color: #778cba; }
+  .footer .credit {
+    padding: 2%;
+    text-align: left;
+    height: 100%; }
+    .footer .credit img {
+      width: 20%;
+      height: auto; }
