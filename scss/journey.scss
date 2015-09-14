@@ -4,6 +4,7 @@
 
 .home {
   padding: 0;
+  background: #a8c5d5;
   .scene {
     height: 100vh;
     overflow: hidden;
@@ -41,13 +42,12 @@
 
 .footer {
   background: #a8c5d5;
-  height: 35vh;
   h3 {
     color: white;
     border-bottom: 1px solid white;
   }
   h4 {
-    padding: 1%;
+    padding-top: 1%;
     .contributor {
       color: white;
       &:hover {
@@ -57,11 +57,14 @@
     }
   }
   .credit {
-    padding: 2%;
+    background: #a8c5d5;
+    margin: 2%;
+    bottom: 0;
     text-align: left;
-    // border: 1px solid black;
-    height: 100%;
+    font-size: 1.5em;
+    height: 50%;
     img {
+      padding: 2%;
       width: 20%;
       height: auto;
     }
