@@ -6,6 +6,8 @@
 #apply {
   text-decoration: none;
   color: white; }
+  #apply:hover {
+    color: #a8c5d5; }
 
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
@@ -93,5 +95,18 @@ small {
       position: relative;
       top: 45%; }
 
-#footer {
-  height: 5vh; }
+.footer {
+  background: #a8c5d5;
+  height: 35vh; }
+  .footer h3 {
+    color: white;
+    border-bottom: 1px solid white; }
+  .footer h4 {
+    padding: 1%; }
+  .footer .credit {
+    padding: 2%;
+    text-align: left;
+    height: 100%; }
+    .footer .credit img {
+      width: 20%;
+      height: auto; }

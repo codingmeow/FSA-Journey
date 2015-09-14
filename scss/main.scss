@@ -5,6 +5,9 @@
 #apply {
   text-decoration: none;
   color: white;
+  &:hover {
+    color: #a8c5d5;
+  }
 }
 
 h1, h2 {
