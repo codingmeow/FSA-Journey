@@ -5,6 +5,34 @@
 .home {
   padding: 0;
   background: #a8c5d5;
+
+  .books {
+    img {
+      width: 100%;
+      display: block;
+    }
+    width: 95px;
+    position: fixed;
+    right: 0;
+    bottom: -1069px;
+    z-index: 2000;
+  }
+
+  .img {
+    height: 70vh;
+    position: fixed;
+    margin: auto;
+    left: 30%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
   .scene {
     height: 100vh;
     overflow: hidden;

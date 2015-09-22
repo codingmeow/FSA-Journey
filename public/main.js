@@ -3,14 +3,23 @@
 
 function newScene(trigger) {
 
-  var duration = $(trigger)[0].scrollHeight;
+  var scrollHeight = $(trigger)[0].scrollHeight;
   return new ScrollMagic.Scene({
     triggerElement: trigger,
-    // triggerHook: 'onEnter',
-    duration: duration / 2,
+    duration: scrollHeight / 2,
     reverse: true
   });
 };
+
+function newCloudScene(trigger) {
+  var scrollHeight = $(trigger)[0].scrollHeight;
+  return new ScrollMagic.Scene({
+    triggerElement: trigger,
+    triggerHook: "onLeave",
+    duration: '200%',
+    reverse: true
+  });
+}
 
 function appear(el) {
   return TweenMax.to(el, 1, {
@@ -32,6 +41,13 @@ function pinTitles(el, sceneArray) {
     }).setPin(el[i]));
   }
 };
+
+function parallaxClouds(el, opacity, movement) {
+  return TweenMax.to(el, 1, {
+    opacity: opacity,
+    x: movement
+  });
+}
 
 function removeTitlePin(el, sceneArray) {
   for (var i = 0; i < el.length; i++) {
@@ -58,9 +74,11 @@ function showProgress(scenes) {
 
 module.exports = {
   newScene: newScene,
+  newCloudScene: newCloudScene,
   appear: appear,
   fade: fade,
   pinTitles: pinTitles,
+  parallaxClouds: parallaxClouds,
   removeTitlePin: removeTitlePin,
   showProgress: showProgress
 };
@@ -115,6 +133,22 @@ $(document).ready(function () {
   var scene2c = utilities.newScene('#scene6').setTween(tween2b);
 
   // SCENE ACCEPTANCE
+
+  // cloud scenes
+  var cloud1 = utilities.parallaxClouds('#cloud1', 0.3, '5%');
+  var scene3C1 = utilities.newCloudScene('#scene6').setTween(cloud1);
+
+  var cloud2 = utilities.parallaxClouds('#cloud2', 0.5, '5%');
+  var scene3C2 = utilities.newCloudScene('#scene6').setTween(cloud2);
+
+  var cloud3 = utilities.parallaxClouds('#cloud3', 1, '15%');
+  var scene3C3 = utilities.newCloudScene('#scene6').setTween(cloud3);
+
+  var cloud4 = utilities.parallaxClouds('#cloud4', 1, '20%');
+  var scene3C4 = utilities.newCloudScene('#scene6').setTween(cloud4);
+
+  var cloudsFade = utilities.fade('.cloud');
+  var scene3C5 = utilities.newScene('#scene7').setTween(cloudsFade);
 
   var tween3a = utilities.appear('#img3');
   var scene3 = utilities.newScene('#scene6a').setTween(tween3a);
@@ -254,7 +288,7 @@ $(document).ready(function () {
 
   // ADDING SCENES TO CONTROLLER
 
-  allScenes = [scene1, scene1a, scene2, scene2a, scene2b, scene2c, scene3, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a];
+  allScenes = [scene1, scene1a, scene2, scene2a, scene2b, scene2c, scene3, scene3C1, scene3C2, scene3C3, scene3C4, scene3C5, scene3a, scene4, scene5, scene5a, scene6, scene6a, scene6b, scene7, scene7a, scene7b, scene7c, scene7d, scene8, scene8a, scene8b, scene9, scene9a, scene9b, scene10, scene10a, scene11, scene11a, scene12, scene12a];
   utilities.showProgress(progressScenes);
   controller.addScene(allScenes);
 });
