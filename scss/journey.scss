@@ -33,6 +33,10 @@
       width: 100%;
     }
   }
+
+  // .title {
+  //   z-index: 1000;
+  // }
   .scene {
     height: 100vh;
     overflow: hidden;
@@ -40,6 +44,7 @@
     text-align: left;
     &.title {
       background: #778cba;
+      z-index: 1000;
       h1 {
         text-align: center;
         font-size: 70px;
@@ -91,6 +96,7 @@
     text-align: left;
     font-size: 1.5em;
     height: 50%;
+    z-index: 1000;
     img {
       padding: 2%;
       width: 20%;

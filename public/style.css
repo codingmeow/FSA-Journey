@@ -62,9 +62,6 @@ small {
   height: 60vh;
   width: auto; }
 
-.title {
-  z-index: 1000; }
-
 #scene8 #img5 {
   height: 45vh;
   width: auto; }
@@ -115,7 +112,8 @@ small {
     background: #a8c5d5;
     text-align: left; }
     .home .scene.title {
-      background: #778cba; }
+      background: #778cba;
+      z-index: 1000; }
       .home .scene.title h1 {
         text-align: center;
         font-size: 70px; }
@@ -152,7 +150,8 @@ small {
     bottom: 0;
     text-align: left;
     font-size: 1.5em;
-    height: 50%; }
+    height: 50%;
+    z-index: 1000; }
     .footer .credit img {
       padding: 2%;
       width: 20%;

@@ -134,11 +134,11 @@ $(document).ready(function () {
 
   // SCENE ACCEPTANCE
 
-  // cloud scenes
+  // parallax clouds
   var cloud1 = utilities.parallaxClouds('#cloud1', 0.3, '5%');
   var scene3C1 = utilities.newCloudScene('#scene6').setTween(cloud1);
 
-  var cloud2 = utilities.parallaxClouds('#cloud2', 0.5, '5%');
+  var cloud2 = utilities.parallaxClouds('#cloud2', 0.5, '8%');
   var scene3C2 = utilities.newCloudScene('#scene6').setTween(cloud2);
 
   var cloud3 = utilities.parallaxClouds('#cloud3', 1, '15%');
@@ -208,6 +208,7 @@ $(document).ready(function () {
   progressScenes.push(scene7a);
 
   // relax
+
   var t7b = new TimelineMax();
   tween7b = utilities.fade('#img8');
   var tween7d = utilities.appear('#img9');
