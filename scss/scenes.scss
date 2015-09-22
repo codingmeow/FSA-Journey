@@ -1,29 +1,43 @@
-.img {
-  height: 70vh;
-  position: fixed;
-  margin: auto;
-  left: 30%;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  img {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
+#cloud1 {
+	position: fixed;
+	// opacity: 0.3;
+	height: 15vh;
+	width: auto;
+	margin-left: -1200px;
+	margin-top: 50px;
 }
 
-.books {
-	img {
-		width: 100%;
-		display: block;
-	}
-	width: 95px;
+#cloud2 {
 	position: fixed;
-	right: 0;
-	bottom: -1069px;
-	z-index: 2000;
+	// opacity: 0.5;
+	height: 15vh;
+	width: auto;
+	margin-left: 100px;
+	margin-top: 150px;
+	z-index: 0;
+}
+
+#cloud3 {
+	position: fixed;
+	// opacity: 1;
+	height: 30vh;
+	width: auto;
+	margin-left: -2000px;
+	margin-bottom: 50px;
+}
+
+#cloud4 {
+	position: fixed;
+	// opacity: 0.7;
+	height: 10vh;
+	width: auto;
+	margin-left: -200px;
+	margin-bottom: 200px;
+	z-index: 600;
+}
+
+#img3 {
+	z-index: 500;
 }
 
 #apply {
@@ -43,6 +57,10 @@
 		height: 60vh;
 		width: auto;
 	}
+}
+
+.title {
+	z-index: 1000;
 }
 
 #scene8 {

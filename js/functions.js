@@ -1,13 +1,22 @@
 function newScene(trigger) {
 
-  var duration = $(trigger)[0].scrollHeight;
+  var scrollHeight = $(trigger)[0].scrollHeight;
   return new ScrollMagic.Scene({
     triggerElement: trigger,
-    // triggerHook: 'onEnter',
-    duration: duration / 2,
+    duration: scrollHeight / 2,
     reverse: true
   });
 };
+
+function newCloudScene(trigger) {
+  var scrollHeight = $(trigger)[0].scrollHeight;
+  return new ScrollMagic.Scene({
+    triggerElement: trigger,
+    triggerHook: "onLeave",
+    duration: '200%',
+    reverse: true
+  });
+}
 
 function appear(el) {
   return TweenMax.to(el, 1, {
@@ -30,6 +39,13 @@ function pinTitles(el, sceneArray) {
       .setPin(el[i]));
   }
 };
+
+function parallaxClouds(el, opacity, movement) {
+  return TweenMax.to(el, 1, {
+    opacity: opacity,
+    x: movement
+  })
+}
 
 function removeTitlePin(el, sceneArray) {
   for (var i = 0; i < el.length; i++) {
@@ -57,9 +73,11 @@ function showProgress(scenes) {
 
 module.exports = {
   newScene: newScene,
+  newCloudScene: newCloudScene,
   appear: appear,
   fade: fade,
   pinTitles: pinTitles,
+  parallaxClouds: parallaxClouds,
   removeTitlePin: removeTitlePin,
   showProgress: showProgress
 };
